@@ -2,32 +2,88 @@
 
 {
     
-    function judge() {
+    
+        function judge() {
 
-        var input_FizzNum = parseFloat(document.getElementById("FizzNum").value);//数値を取得
-        var input_BuzzNum = parseFloat(document.getElementById("BuzzNum").value);//数値を取得
-        // const number = document.querySelector("input");
-        // document.write(number.value);
-        // number.value = " ";
-        // number.focus();
-        
+            var input_FizzNum = parseFloat(document.getElementById("FizzNum").value);//数値を取得
+            var input_BuzzNum = parseFloat(document.getElementById("BuzzNum").value);//数値を取得
+            
 
-
-        
-        if(Number.isInteger(input_FizzNum) === true){
-            result = [];
-
-            for(let i = 1; i < 100; i ++){
-                result.push(i * input_FizzNum);
+            if(Number.isInteger(input_FizzNum && input_BuzzNum) === true){
+                let arrayFizz = [];
+                for(let i = 1; i < 100; i ++){
+                    arrayFizz.push(i * input_FizzNum);
+                }
+    
+                let arrayBuzz = [];
+                for(let i = 1; i < 100; i ++){
+                    arrayBuzz.push(i * input_BuzzNum);
+                }
+            
+                let arrayFizzBuzz = arrayFizz.concat(arrayBuzz);
+    
+                arrayFizzBuzz.forEach(number => {
+                    if(number % input_FizzNum === 0 && number % input_BuzzNum === 0){
+                        document.write(`FizzBuzz ${number}\n`);
+                    }else if(number % input_FizzNum === 0){
+                        document.write(`Fizz ${number}\n`);
+                    }else if(number % input_BuzzNum === 0){
+                        document.write(`Buzz ${number}\n`);
+                    }
+                });
+            } else {
+                document.write("整数値ではありません");
             }
-            return result;
-            document.write(result); 
-            // for(let i = 1; i < 100; i ++){
-            //     result.push(i * input_BuzzNum);
-            // }
-        }else{
-            document.write("整数値ではありません");
         }
+
+        document.querySelector('.button').addEventListener('click', () => {
+            document.getElementById("output").textContent = judge();
+        }); 
+
+        
+        // if(Number.isInteger(input_FizzNum) === true){
+        //     result = [];
+            
+
+            // for(let i = 1; i < 100; i ++){
+            //     if(i % input_FizzNum === 0 && i % input_BuzzNum === 0){
+            //         document.write(i * input_FizzNum * input_BuzzNum);
+            //         // result.push(i * input_FizzNum * input_BuzzNum);
+            //     } else if(i % input_FizzNum === 0){
+            //         // result.push(i * input_FizzNum);
+            //         document.write(i * input_FizzNum);
+            //     } else if(i % input_BuzzNum === 0){
+            //         // result.push(i * input_BuzzNum);
+            //         document.write(i * input_BuzzNum);
+            //     }
+            // }
+        //     return result;
+        //     var f = function (a, b) {
+        //         return a - b
+        //     }
+        //     document.write(result.sort(f));
+        // }else{
+        //     document.write("整数値ではありません");
+        // }
+
+
+       
+            // var b = arrayFizzBuzz.filter(function (x, i, self) {
+            //         return self.indexOf(x) === i;重複をなくす
+            //     });
+                // for(let i = 1; i < 100; i ++){
+                //     result.push(i * input_FizzNum);
+                // }
+                // return result;
+                // document.write(result); 
+                // // for(let i = 1; i < 100; i ++){
+                // //     result.push(i * input_BuzzNum);
+                // // }
+           
+    
+            
+
+        
 
        
             // for(let i = 1; i < 100; i ++){
@@ -51,10 +107,14 @@
             // }
 
                   
-    }
+    
 
             
-           
+           // const number = document.querySelector("input");
+            // document.write(number.value);
+            // number.value = " ";
+            // number.focus();
+            
             
 
     // var p = document.createElement('p');
@@ -70,9 +130,7 @@
 
         // document.querySelector('.button').addEventListener('click', judge);
     // document.write(judge());
-    document.querySelector('.button').addEventListener('click', () => {
-        document.getElementById("output").textContent = judge();
-    });       
+         
     
 
    
