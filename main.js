@@ -20,8 +20,28 @@
                     arrayBuzz.push(i * input_BuzzNum);
                 }
             
-                let arrayFizzBuzz = arrayFizz.concat(arrayBuzz);
+                var arrayFizzBuzz = arrayFizz.concat(arrayBuzz);
     
+                arrayFizzBuzz = items.filter( function( value ) {
+ 
+                    //5よりも小さい数値だけを抽出
+                    return value < 100;
+                 
+                });
+                // arrayFizzBuzz.filter(function(x, i, self) {
+                //     return self.indexOf(x) === i;
+                // });
+                // var array = [1,2,3,3,2,2,5,10,10,10];
+
+                // array.filter(function (x, i, self) {
+                // return self.indexOf(x) === i;
+                // });
+
+                // console.log(b); // [ 1, 2, 3, 5, 10]
+
+
+
+
                 arrayFizzBuzz.forEach(number => {
                     if(number % input_FizzNum === 0 && number % input_BuzzNum === 0){
                         document.write(`FizzBuzz ${number}\n`);
