@@ -22,11 +22,28 @@
             } else {
                 document.write("整数値ではありません");
             }
-        
+            
+            
             const p = document.createElement('p');
-            p.textContent = fbArray;
-            document.body.appendChild(p);
+            const body = document.querySelector('body');
+            body.appendChild(p);
+            // p.textContent = fbArray;
+            p.textContent = fbArray.join('');
+            
+            
+            
+            
+
+             // for(const v of fbArry) {
+            //     fbText.push(`<p>${v}</p>`);
+            // }
+
+            // const fbHTML = fbText.join('');
+
+            // fbResult.innerHTML = fbHTML;
         }
+
+
         
 
            
