@@ -12,21 +12,41 @@
             if(Number.isInteger(input_FizzNum && input_BuzzNum) === true){
                 for(let i = 1; i < 99; i++){
                     if(i % input_FizzNum === 0 && i % input_BuzzNum === 0) {
-                        fbArray.push('FizzBuzz' + i);
+                        const number = document.write('FizzBuzz' + i)
+                        const p = document.createElement('p');
+                        const body = document.querySelector('body');
+                        body.appendChild(p);
                     } else if(i % input_FizzNum === 0) {
-                        fbArray.push('Fizz' + i);
+                        const number = document.write('Fizz' + i)
+                        const p = document.createElement('p');
+                        const body = document.querySelector('body');
+                        body.appendChild(p);
                     } else if(i % input_BuzzNum === 0) {
-                        fbArray.push('Buzz' + i);
+                        const number = document.write('Buzz' + i)
+                        const p = document.createElement('p');
+                        const body = document.querySelector('body');
+                        body.appendChild(p);
                     } 
                 }
             } else {
                 document.write("整数値ではありません");
             }
+            // if(Number.isInteger(input_FizzNum && input_BuzzNum) === true){
+            //     for(let i = 1; i < 99; i++){
+            //         if(i % input_FizzNum === 0 && i % input_BuzzNum === 0) {
+            //             fbArray.push('FizzBuzz' + i);
+            //         } else if(i % input_FizzNum === 0) {
+            //             fbArray.push('Fizz' + i);
+            //         } else if(i % input_BuzzNum === 0) {
+            //             fbArray.push('Buzz' + i);
+            //         } 
+            //     }
+            // } else {
+            //     document.write("整数値ではありません");
+            // }
             
             
-            const p = document.createElement('p');
-            const body = document.querySelector('body');
-            body.appendChild(p);
+            
             // p.textContent = fbArray;
             p.textContent = fbArray.join('');
             
