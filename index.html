@@ -9,8 +9,16 @@
 <body>
     <h1>FizzBizz問題</h1>
 
-    <div><p>FizzNum：</p><input type="text" id="FizzNum"　value="整数値を入力してください"></div>
-    <div><p>BuzzNum：</p><input type="text" id="BuzzNum"　value="整数値を入力してください"></div>
+    <div class="FizzNum">
+        <p class="fizz-text">FizzNum：</p>
+        <input type="text" id="FizzNum" class="fizz" value="" placeholder="整数値を入力してください">
+    </div>
+    
+    <div>
+        <p class="buzz-text">BuzzNum：</p>
+        <input type="text" id="BuzzNum" class="buzz" value="" placeholder="整数値を入力してください">
+    </div>
+    
     <button class="button">実行</button>
     <p id="output">[出力]</p>
     

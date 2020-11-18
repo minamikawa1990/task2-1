@@ -1,3 +1,22 @@
-#FizzNum  {
+#FizzNum ,#BuzzNum {
+    
+}
+
+.fizz-text {
     display:inline-block;
+    width:100px;
+}
+
+.buzz-text {
+    display:inline-block;
+    width:100px;
+}
+.fizz {
+    display:inline-block;
+    width:200px;
+}
+
+.buzz {
+    display:inline-block;
+    width:200px;
 }
