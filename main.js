@@ -8,7 +8,7 @@
             const input_FizzNum = parseFloat(document.getElementById("FizzNum").value);//数値を取得
             const input_BuzzNum = parseFloat(document.getElementById("BuzzNum").value);//数値を取得
             
-            if(!Number.isInteger(input_FizzNum && input_BuzzNum)){
+            if(!Number.isInteger(input_FizzNum || input_BuzzNum)){
                 const p = document.createElement('p');
                 p.classList.add ='output';
                 p.textContent = '整数値を入力してください';
